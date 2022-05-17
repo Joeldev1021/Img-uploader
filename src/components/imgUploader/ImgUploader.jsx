@@ -34,14 +34,15 @@ const ImgUploader = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Upload your image</h1>
+      <p className="title">Upload your image</p>
+      <p className="text">File should be Jpeg, Png,...</p>
       <FileDragAndDrop/>
-      <p>or</p>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="file" name="image" className="input-file" />
-        <button type="submit">Upload</button>
+      <span className="or">or</span>
+      <form >
+        <input type="file" id="file" className="custom-file" name="image"  />
+       <label htmlFor="file" className="custom-file-btn">Choose</label>
       </form>
-      {progresspercent > 0 && <p>{progresspercent}%</p>}
+     {progresspercent > 0 && <p>{progresspercent}%</p>}
       {imgUrl && <p>{imgUrl}</p>}
     </div>
   );
