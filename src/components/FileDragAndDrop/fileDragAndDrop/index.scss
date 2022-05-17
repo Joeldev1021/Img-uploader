@@ -1,0 +1,23 @@
+.file-area {
+  width: 338px;
+  height: 219px;
+  margin:auto;
+  border-radius: 12px;
+  background: #F6F8FB;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5px;
+  border: 2px dashed #97BEF4;
+
+  &:hover {
+    border: 2px dashed #7ea5dd;
+  }
+  span {
+    color: #BDBDBD;
+    font-size: 12px;
+  }
+}
+
+
