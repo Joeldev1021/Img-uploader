@@ -5,10 +5,9 @@ import { storage } from '../firebase';
 export default function useFirebaseUpload ({file}){
 
     const [imgUrl, setImgUrl] = useState(null);
-    const [progresspercent, setProgresspercent] = useState(0);
+    const [progressPercent, setProgressPercent] = useState(0);
 
     useEffect(() => {
-
      handleFileUpload(file) 
     }, [file])
 
@@ -25,17 +24,17 @@ export default function useFirebaseUpload ({file}){
         const progress = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
-        setProgresspercent(progress);
-      },
+        setProgressPercent(progress); },
       (error) => {
         alert(error);
       },
       () => {
-        getDownloadURL(uploadImg.snapshot.ref).then((downloadURL) => {
+        getDownloadURL(uploadImg.snapshot.ref)
+        .then((downloadURL) => {
           setImgUrl(downloadURL);
         });
       }
     ); 
  }
-   return {imgUrl, progresspercent};
+   return {imgUrl, progressPercent};
 }
