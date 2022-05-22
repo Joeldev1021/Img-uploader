@@ -1,0 +1,38 @@
+.img-uploaded {
+  margin-top: 15px;
+  width: 90%;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-success {
+  width: 35px;
+}
+
+.form-link {
+  margin: auto;
+  margin-top: 10px;
+  width: 90%;
+  background: #F6F8FB;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 75%;
+    background: none;
+    border:none;
+    outline: none;
+  }
+  button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 8px;
+    background: #2F80ED;
+    border-radius: 8px;
+    color:white;
+  }
+}
