@@ -2,7 +2,7 @@ import './App.scss';
 import { useState } from 'react';
 import useFirebaseUpload from './hooks/useFirebaseUpload';
 import ImgSelection from './components/ImgSelection/ImgSelection';
-import Uploaded from './components/Uploading/Uploading';
+import Uploader from './components/Uploader/Uploader';
 
 function App() {
   const [file, setFile] = useState(null)
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      {progressPercent > 0 ? <Uploaded imgUrl={imgUrl} progressPercent={progressPercent} /> : <ImgSelection setFile={setFile} />}
+      {progressPercent > 0 ? <Uploader imgUrl={imgUrl} progressPercent={progressPercent} /> : <ImgSelection setFile={setFile} />}
     </div>
   );
 }
