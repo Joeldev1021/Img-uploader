@@ -4,8 +4,8 @@ import "./index.scss";
 const ButtonUpload = ({setFile}) => {
 
  const handleInputChange = (e) => {
-    console.log("button upload")
-    setFile(e.target.files[0]);
+   /*  setFile(e.target.files[0]); */
+   setFile(e.target.files[0]);
  };
 
   return (
